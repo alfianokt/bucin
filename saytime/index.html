@@ -75,6 +75,10 @@
   .a-malam::before {
     background: #607d8b;
   }
+
+  .a-tidur:before {
+    background: #607d8b;
+  }
 </style>
 <body>
   <div id="app">
@@ -164,10 +168,11 @@
       else if (jam >= 15 && jam < 19) {
         now = 'sore'
       }
-      else if ((jam >= 19 && jam <= 24) || jam < 6) {
+      else if (jam >= 19 && jam <= 24) || jam < 6) {
         now = 'malam'
       }
-
+      else if (jam >= 22 && jam <=24)
+        now = 'tidur'
       oldNow != now ? changeTheme() : ''
     }, 150)
   </script>
